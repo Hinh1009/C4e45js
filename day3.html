@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1>Caculate the area of the triangle</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bai toan tinh dien tich tam giac voi so do 3 canh cho truoc
+        //Nhap chieu dai cac canh
+        let aEdge = prompt(" Nhap chieu dai canh a ");
+        let bEdge = prompt(" Nhap chieu dai canh b ");
+        let cEdge = prompt(" Nhap chieu dai canh c ");
+        //Cong thuc tinh dien tich tam giac theo cong thuc Heron
+        let halfC = aEdge / 2 + bEdge / 2 + cEdge / 2;
+        let triS = (halfC * (halfC - aEdge) * (halfC - bEdge) * (halfC - cEdge)) ** (0.5);
+        //Kiem tra 3 canh nhap vao co phai la 3 canh cua 1 tam giac hay khong
+        if (aEdge * 1 >= bEdge * 1 + cEdge * 1 || bEdge * 1 >= aEdge * 1 + cEdge * 1 || cEdge * 1 >= aEdge * 1 + bEdge * 1) {
+            document.write("3 canh da cho ko phai la cua 1 tam giac");
+        } else {
+            document.write("Dien tich tam giac la " + triS);
+        }
+    </script>
+</body>
+
+</html>
