@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1>Kiem tra so nguyen to</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bien kiem tra true or false
+        let flag = true
+            //Nhap so can kiem tra
+        let soKiemTra = prompt("Nhap so can kiem tra")
+        if (soKiemTra > 0 && soKiemTra < 2) {
+            document.write(soKiemTra + " khong phai la so nguyen to")
+        } else if (soKiemTra == 2) {
+            document.write(soKiemTra + " la so nguyen to")
+        } else {
+            for (i = 1; i <= soKiemTra - 1; i++) {
+                if (soKiemTra % i == 0) {
+                    flag = false
+                } else {
+                    flag = true
+                }
+            }
+        }
+        if (flag = false) {
+            document.write(soKiemTra + " khong phai la so nguyen to")
+        } else {
+            document.write(soKiemTra + " la so nguyen to")
+        }
+    </script>
+
+</body>
+
+</html>
