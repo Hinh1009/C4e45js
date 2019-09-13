@@ -12,19 +12,19 @@
 <body>
     <script>
         //Bien kiem tra true or false
-        let flag = true
-            //Nhap so can kiem tra
+        let flag = true;
+        //Nhap so can kiem tra
         let soKiemTra = Number(prompt("Nhap so can kiem tra"));
         //Dieu kien kiem tra so nguyen to
         if (soKiemTra < 2) {
             flag = false;
         } else if (soKiemTra == 2) {
-            flag = true
+            flag = true;
         } else {
             for (i = 2; i <= soKiemTra - 1; i++) {
                 if (soKiemTra % i == 0) {
                     flag = false;
-                    break
+                    break;
                 }
             }
         }
