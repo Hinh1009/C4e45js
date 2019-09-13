@@ -14,24 +14,24 @@
         //Bien kiem tra true or false
         let flag = true
             //Nhap so can kiem tra
-        let soKiemTra = prompt("Nhap so can kiem tra")
-        if (soKiemTra > 0 && soKiemTra < 2) {
-            document.write(soKiemTra + " khong phai la so nguyen to")
+        let soKiemTra = Number(prompt("Nhap so can kiem tra"));
+        //Dieu kien kiem tra so nguyen to
+        if (soKiemTra < 2) {
+            flag = false;
         } else if (soKiemTra == 2) {
-            document.write(soKiemTra + " la so nguyen to")
+            flag = true
         } else {
-            for (i = 1; i <= soKiemTra - 1; i++) {
+            for (i = 2; i <= soKiemTra - 1; i++) {
                 if (soKiemTra % i == 0) {
-                    flag = false
-                } else {
-                    flag = true
+                    flag = false;
+                    break
                 }
             }
         }
-        if (flag = false) {
-            document.write(soKiemTra + " khong phai la so nguyen to")
+        if (flag == false) {
+            document.write(soKiemTra + " khong phai la so nguyen to");
         } else {
-            document.write(soKiemTra + " la so nguyen to")
+            document.write(soKiemTra + " la so nguyen to");
         }
     </script>
 
