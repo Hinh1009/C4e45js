@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1> Tinh tong cua tat ca cac boi so cua 3 va 5 be hon 1000</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+        let magBoiSo = []
+        for (i = 0; i < 1000; i += 3) {
+            magBoiSo.push(i)
+        }
+        for (n = 0; n < 1000; n += 5) {
+            magBoiSo.push(n)
+        }
+
+        function getSum(total, num) {
+            return total + Math.round(num);
+        }
+        document.write(magBoiSo.reduce(getSum, 0))
+    </script>
+</body>
+
+</html>
