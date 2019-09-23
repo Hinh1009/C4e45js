@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1> Chuong Trinh Quan ly Sinh Vien</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sinhVien = []
+        while (true) {
+            let inPut = prompt("Nhap ky tu dau tien cua chuc nang ban muon C-R-U-D")
+            if (inPut === 'E') {
+                break
+            }
+            switch (inPut) {
+                case `C`:
+                    var soLuongSinhVien = Number(prompt("Nhap so luong sinh vien"))
+                    for (i = 1; i <= soLuongSinhVien; i++) {
+                        var tenSinhVien = prompt(`Nhap ten sinh vien thu ${i}`)
+                        sinhVien.push(tenSinhVien)
+                    }
+                    break
+                case `R`:
+
+                    for (n = 1; n <= sinhVien.length; n++) {
+                        var soThuTu = Number(prompt(`nhập STT của  Sinh viên `))
+                        sinhVien[n - 1] = sinhVien[n - 1] + " Co so thu tu la " + soThuTu
+
+                    }
+                    var outPut = Number(prompt(`Bạn muốn lấy sinh viên thứ mấy `))
+                    console.log(sinhVien[outPut - 1]);
+                    break
+
+                case `U`:
+
+                    var soLuongSinhVienUpdate = Number(prompt("Nhap so luong sinh vien ban muon them vao danh sach"))
+                        //Nhập số lượng 1 thôi a nhá :)).
+                        // A đọc code r xem hộ e sai chỗ nào mà nếu nhập từ 2 trở lên thì người thứ 2 trở đi đó ko đc gán STT vào.
+                        // Em cám ơn :))
+                    for (j = 1; j <= soLuongSinhVienUpdate; j++) {
+                        var nameUpdate = prompt("Nhap ten sinh vien moi vao ")
+                        sinhVien.push(nameUpdate)
+                        var soThuTuUpdate = Number(prompt(`nhap STT cua Sinh vien moi bat dau tu ${n}`))
+                        sinhVien[n - 1] = sinhVien[n - 1] + " Có số thứ tự là " + soThuTuUpdate
+                    }
+                    console.log(sinhVien)
+                    break
+
+                case `D`:
+                    var numberDelete = Number(prompt("Nhap STT sv muon xoa ra khoi mang   "))
+                    sinhVien.splice(numberDelete - 1, 1);
+                    console.log(sinhVien)
+                    break
+                default:
+                    console.log(" Kiem tra lai phim tat ")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
