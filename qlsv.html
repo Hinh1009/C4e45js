@@ -20,7 +20,8 @@
             } else {
 
                 switch (menuCase) {
-                    case `C`: //create
+                    case `C`: 
+                        //create
                         let soLuongSinhVien = Number(prompt("Nhap so luong sinh vien"))
                         for (i = 0; i < soLuongSinhVien; i++) {
                             var student = {
@@ -38,7 +39,8 @@
                             studentList.push(student)
                         }
                         break
-                    case `R`: //Read
+                    case `R`: 
+                        //Read
                         let soThuTu = Number(prompt("Nhap so thu tu cua sinh vien can tim"))
                         console.log(studentList[soThuTu - 1])
                         break
@@ -57,6 +59,7 @@
 
                         break
                     case `D`:
+                        //Delete
                         let studentIndex = Number(prompt("Nhap vao stt cua sinh vien ban muon xoa"))
                         studentList.splice(studentList[studentIndex - 1], 1)
                         console.log(studentList)
