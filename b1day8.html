@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h1>Một số bài toán liên quan đến array</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let soPhanTu = Number(prompt("nhap so phan tu n:= "))
+        let numArr = []
+        for (let i = 0; i < soPhanTu; i++) {
+            numArr.push(prompt("moi nhap phan tu i:="))
+        }
+        console.log("Mang nhap vao la: " + numArr)
+            //Sap xep mang theo thu tu tang dan
+        function compareNumbers(a, b) {
+            return a - b
+        }
+        console.log("Phan tu trong mang sap xep theo thu tu tang dan la: " + numArr.sort(compareNumbers));
+        //Tim ra phan tu lon thu 2 trong mang
+        let maxInArray = Math.max.apply(Math, numArr);
+        numArr.pop(maxInArray);
+        let notmaxInArray = Math.max.apply(Math, numArr);
+        console.log("Phan tu lon thu 2 trong mang da nhap la: " + notmaxInArray);
+    </script>
+</body>
+
+</html>
