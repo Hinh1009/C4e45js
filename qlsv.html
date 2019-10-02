@@ -2,73 +2,30 @@
 <html lang="en">
 
 <head>
-    <h1>Quản Lý Sinh Viên</h1>
+    <h1>Danh sach sinh vien</h1>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Qlsv</title>
 </head>
 
 <body>
+    <ul id="dssv">Danh sach sinh vien</ul>
+    <li id="name1">Pham Bao Ngoc</li>
+    <li id="name2">Nguyen Van Dong</li>
+    <li id="name3">Hoang Dinh Hinh</li>
     <script>
-        let studentList = []
-
-        while (true) {
-            let menuCase = prompt("Moi nhap chuc nang ban muon C-R-U-D")
-            if (menuCase === `E`) {
-                break
-            } else {
-
-                switch (menuCase) {
-                    case `C`: 
-                        //create
-                        let soLuongSinhVien = Number(prompt("Nhap so luong sinh vien"))
-                        for (i = 0; i < soLuongSinhVien; i++) {
-                            var student = {
-                                index: 0,
-                                name: "",
-                                school: "",
-                                age: 0,
-                                Mssv: 0,
-                            }
-                            student.index = prompt(`Nhap so thu tu cua sinh vien ${i+1}`)
-                            student.name = prompt("Nhap ten sinh vien")
-                            student.age = prompt("Nhap tuoi sinh vien")
-                            student.school = prompt("Nhap ten truong cua sinh vien")
-                            student.Mssv = prompt("Nhap vao Mssv")
-                            studentList.push(student)
-                        }
-                        break
-                    case `R`: 
-                        //Read
-                        let soThuTu = Number(prompt("Nhap so thu tu cua sinh vien can tim"))
-                        console.log(studentList[soThuTu - 1])
-                        break
-                    case `U`:
-                        //Update
-                        let soLuongUpdate = Number(prompt("Nhap so luong sinh vien muon them"))
-                        for (j = studentList.length; j < (studentList.length + soLuongUpdate); j++) {
-                            student.index = prompt(`Nhap so thu tu cua sinh vien ${j + 1}`)
-                            student.name = prompt("Nhap ten sinh vien")
-                            student.age = prompt("Nhap tuoi sinh vien")
-                            student.school = prompt("Nhap ten truong cua sinh vien")
-                            student.Mssv = prompt("Nhap vao Mssv")
-                            console.log(" sv moi dc updatela " + student.name + " " + student.age + " tuoi " + " hoc truong " + student.school + " MSSV " + student.Mssv)
-
-                        }
-
-                        break
-                    case `D`:
-                        //Delete
-                        let studentIndex = Number(prompt("Nhap vao stt cua sinh vien ban muon xoa"))
-                        studentList.splice(studentList[studentIndex - 1], 1)
-                        console.log(studentList)
-                        break
-                    default:
-                        console.log("Vui long nhap lai chuc nang nay")
-                }
-            }
-        }
+        //Update
+        document.getElementById("name1").innerHTML = "Mr. Ngoc Pham";
+        let ten2 = document.getElementsByTagName("li");
+        ten2[1].innerHTML = "Duy Dang";
+        //Create
+        let node = document.createElement("li");
+        let textNode = document.createTextNode("Nguyen Van Loi");
+        node.appendChild(textNode);
+        document.getElementById("dssv").appendChild(node);
+        //Delete
+        document.getElementById("dssv").remove();
     </script>
 </body>
 
