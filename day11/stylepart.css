@@ -1,0 +1,26 @@
+.vertical-menu {
+    background: #D5B0AC;
+    text-decoration-color: #402E2A;
+    font-weight: bold;
+    text-align: center;
+}
+
+.vertical {
+    display: inline-block;
+    width: 100px;
+    line-height: 30px;
+    border: #FFFFFF;
+}
+
+.allparam {
+    display: block;
+    border: #FFFFFF;
+    border-style: solid;
+    border-width: 0.25px;
+    margin: 0px;
+}
+
+.allparam:hover {
+    background-color: #FFFFFF;
+    color: #9CD08F;
+}
